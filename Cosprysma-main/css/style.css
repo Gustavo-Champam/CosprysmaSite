@@ -55,33 +55,40 @@ a:hover{opacity:.9}
 .nav-flex{
   display:flex;
   align-items:center;
+  gap:24px;
   padding:10px 0;
 }
 
+/* logo à esquerda */
 .brand{
   display:inline-flex;
   align-items:center;
   gap:10px;
   color:var(--fg);
   font-weight:700;
-  margin-right:20px;
+  flex-shrink:0;
 }
 
-/* nav desktop */
+/* nav no meio */
 .mainnav{
   display:flex;
   align-items:center;
+  justify-content:center;
   gap:16px;
-  margin-left:auto;
+  flex:1;
   flex-wrap:nowrap;
 }
+
+/* links com emoji + texto alinhados */
 .mainnav a{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
   padding:10px 14px;
   border-radius:999px;
   white-space:nowrap;
   font-size:14px;
 }
-.mainnav a:first-child{margin-left:8px;}
 .mainnav a:hover{background:rgba(255,255,255,.06)}
 .mainnav a[aria-current="page"]{
   background:rgba(255,255,255,.12);
@@ -93,12 +100,12 @@ a:hover{opacity:.9}
   font-weight:800;
 }
 
-/* ações da nav */
+/* ações à direita */
 .nav-actions{
   display:flex;
   align-items:center;
   gap:10px;
-  margin-left:12px;
+  flex-shrink:0;
 }
 .icon-btn{
   background:transparent;
@@ -112,19 +119,31 @@ a:hover{opacity:.9}
 
 /* nav mobile */
 @media(max-width:860px){
+  .nav-flex{
+    justify-content:space-between;
+  }
+
   .mainnav{
     display:none;
     position:absolute;
     inset:64px 12px auto;
     flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
     padding:12px;
     border:1px solid rgba(255,255,255,.08);
     border-radius:16px;
     background:rgba(13,13,20,.98);
+    flex:0;
   }
   .mainnav.open{display:flex}
+  .mainnav a{
+    width:100%;
+    justify-content:flex-start;
+    font-size:16px;
+  }
+
   .burger{display:inline-block}
-  .mainnav a{font-size:16px}
 }
 
 /* HERO */
@@ -547,7 +566,7 @@ a:hover{opacity:.9}
   resize:vertical;
 }
 
-/* PÁGINAS NOVAS: EDITORIAS / EDIÇÃO MENSAL / CLASSIFICADOS */
+/* PÁGINAS: editorias / classificados etc. */
 .page-head{
   margin:24px 0 18px;
 }

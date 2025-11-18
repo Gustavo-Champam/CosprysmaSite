@@ -2,21 +2,24 @@
 <html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Editorias – Cosprysma</title>
-  <meta name="description" content="Editorias diárias do jornal comunitário de cosplay Cosprysma." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flashcosplay – Cosprysma</title>
+  <meta name="description" content="Posts rápidos, visuais e vibrantes da cena cosplay." />
+  <meta name="theme-color" content="#7C3AED" />
+
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" href="img/logo.png" />
+  <link rel="icon" href="icons/icon-192.png" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div class="bg-mesh" aria-hidden="true"></div>
 
-  <!-- HEADER GLOBAL -->
   <header class="topbar glass">
     <div class="container nav-flex">
       <a class="brand" href="index.html" aria-label="Página inicial">
@@ -25,14 +28,14 @@
       </a>
       <nav class="mainnav" id="nav">
         <a href="index.html">Início</a>
-        <a href="editorias.html" aria-current="page">Editorias</a>
-        <a href="agenda.html">Agenda</a>
+        <a href="estrela.html">⭐ Estrela da Semana</a>
+        <a href="fanart.html">🎨 Fanart</a>
+        <a href="flashcosplay.html" aria-current="page">⚡ Flashcosplay</a>
+        <a href="agenda.html">📅 Agenda</a>
+        <a href="tutoriais.html">🛠️ Cosmakelab</a>
+        <a href="falacosplay.html">💬 Fala Cosplay</a>
+        <a href="classificados.html">Classificados Cosplay</a>
         <a href="galeria.html">Galeria</a>
-        <a href="tutoriais.html">Tutoriais</a>
-        <a href="classificados.html">Classificados</a>
-        <a href="edicao-mensal.html">Edição mensal</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="equipe.html">Equipe</a>
         <a href="contato.html">Contato</a>
         <a class="cta" href="fala.html">Fala, Cosplayer!</a>
       </nav>
@@ -43,48 +46,15 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container narrow">
     <header class="page-head">
-      <h1>Editorias diárias</h1>
+      <h1>⚡ Flashcosplay</h1>
       <p class="lead">
-        Cada dia uma editoria diferente: Estrela da Semana, Fanart, Flashcosplay, Agenda, Cosmakelab e Fala Cosplay.
+        Post rápido, visual, vibrante. Fotos de cosplayers, detalhes de fantasias ou capturas de eventos.
       </p>
     </header>
 
-    <section class="filterbar card glass">
-      <div class="row gap">
-        <label>
-          Editorias
-          <select id="filtro-editoria">
-            <option value="">Todas</option>
-            <option value="estrela-da-semana">⭐ Estrela da Semana</option>
-            <option value="fanart">🎨 Fanart</option>
-            <option value="flashcosplay">⚡ Flashcosplay</option>
-            <option value="agenda">📅 Agenda</option>
-            <option value="cosmakelab">🛠️ Cosmakelab</option>
-            <option value="fala-cosplay">💬 Fala Cosplay</option>
-          </select>
-        </label>
-
-        <label>
-          Buscar por termo
-          <input type="search" id="busca-editorias" placeholder="personagem, tema, cidade..." />
-        </label>
-
-        <label>
-          Ordenar por
-          <select id="ordenacao-editorias">
-            <option value="data-desc">Mais recentes</option>
-            <option value="data-asc">Mais antigas</option>
-            <option value="destaque">Somente destaques</option>
-          </select>
-        </label>
-      </div>
-    </section>
-
-    <section class="cards-list reveal" id="lista-editorias" aria-live="polite">
-      <!-- cards via JS -->
-    </section>
+    <!-- EM BRANCO PARA OS POSTS RÁPIDOS DE FOTO -->
   </main>
 
   <footer class="footer glass">
@@ -104,17 +74,16 @@
       <section>
         <h4>Newsletter</h4>
         <form id="nl-form" class="row">
-          <input type="email" name="email" required placeholder="seu@email.com">
+          <input type="email" name="email" placeholder="seu@email.com" required aria-label="Email" />
           <button class="btn" type="submit">Assinar</button>
         </form>
+        <small class="muted">Sem spam — só novidades legais de cosplay.</small>
       </section>
     </div>
     <div class="copyright">© 2025 Cosprysma. Feito com ♥ pela comunidade.</div>
   </footer>
 
   <button class="to-top" aria-label="Voltar ao topo">↑</button>
-
   <script src="js/main.js" defer></script>
-  <script src="js/editorias.js" defer></script>
 </body>
 </html>

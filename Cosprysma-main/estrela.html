@@ -2,21 +2,24 @@
 <html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Edição Mensal – Cosprysma</title>
-  <meta name="description" content="Matérias especiais mensais do jornal comunitário de cosplay Cosprysma." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estrela da Semana – Cosprysma</title>
+  <meta name="description" content="Perfil completo de cosplayers e artistas da comunidade cosplay." />
+  <meta name="theme-color" content="#7C3AED" />
+
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" href="img/logo.png" />
+  <link rel="icon" href="icons/icon-192.png" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <div class="bg-mesh" aria-hidden="true"></div>
 
-  <!-- HEADER GLOBAL -->
   <header class="topbar glass">
     <div class="container nav-flex">
       <a class="brand" href="index.html" aria-label="Página inicial">
@@ -25,14 +28,14 @@
       </a>
       <nav class="mainnav" id="nav">
         <a href="index.html">Início</a>
-        <a href="editorias.html">Editorias</a>
-        <a href="agenda.html">Agenda</a>
+        <a href="estrela.html" aria-current="page">⭐ Estrela da Semana</a>
+        <a href="fanart.html">🎨 Fanart</a>
+        <a href="flashcosplay.html">⚡ Flashcosplay</a>
+        <a href="agenda.html">📅 Agenda</a>
+        <a href="tutoriais.html">🛠️ Cosmakelab</a>
+        <a href="falacosplay.html">💬 Fala Cosplay</a>
+        <a href="classificados.html">Classificados Cosplay</a>
         <a href="galeria.html">Galeria</a>
-        <a href="tutoriais.html">Tutoriais</a>
-        <a href="classificados.html">Classificados</a>
-        <a href="edicao-mensal.html" aria-current="page">Edição mensal</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="equipe.html">Equipe</a>
         <a href="contato.html">Contato</a>
         <a class="cta" href="fala.html">Fala, Cosplayer!</a>
       </nav>
@@ -43,15 +46,15 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container narrow">
     <header class="page-head">
-      <h1>Edição mensal</h1>
-      <p class="lead">Reportagens especiais, entrevistas longas e análises profundas sobre o universo cosplay.</p>
+      <h1>⭐ Estrela da Semana</h1>
+      <p class="lead">
+        Perfil completo de um cosplayer ou artista. Inclui fotos, entrevista e narrativa humanizada.
+      </p>
     </header>
 
-    <section id="lista-edicoes" class="cards-list reveal">
-      <!-- conteúdo via JS -->
-    </section>
+    <!-- AREA EM BRANCO PARA VOCÊS INSERIREM AS MATÉRIAS DESSA EDITORIA -->
   </main>
 
   <footer class="footer glass">
@@ -71,17 +74,16 @@
       <section>
         <h4>Newsletter</h4>
         <form id="nl-form" class="row">
-          <input type="email" name="email" required placeholder="seu@email.com">
+          <input type="email" name="email" placeholder="seu@email.com" required aria-label="Email" />
           <button class="btn" type="submit">Assinar</button>
         </form>
+        <small class="muted">Sem spam — só novidades legais de cosplay.</small>
       </section>
     </div>
     <div class="copyright">© 2025 Cosprysma. Feito com ♥ pela comunidade.</div>
   </footer>
 
   <button class="to-top" aria-label="Voltar ao topo">↑</button>
-
   <script src="js/main.js" defer></script>
-  <script src="js/edicao-mensal.js" defer></script>
 </body>
 </html>
