@@ -1,3 +1,7 @@
 {
-    "liveServer.settings.port": 5501
+  "liveServer.settings.ignoreFiles": [
+    "**/node_modules/**",
+    "**/.git/**",
+    "**/backend/uploads/**"
+  ]
 }

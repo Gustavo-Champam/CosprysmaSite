@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cosprysma – Painel Admin</title>
+    <meta
+      name="description"
+      content="Painel administrativo para gerenciar reportagens, matérias e posts do Cosprysma."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/img/logoprincipal.jpeg" />
+    <meta name="theme-color" content="#7C3AED" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="admin-body">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <div>
+          <h1 class="admin-title">Cosprysma · Painel</h1>
+          <p class="admin-subtitle">
+            Crie reportagens completas, com texto, fotos e legendas, direto pelo
+            painel.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <!-- GRID PRINCIPAL: FORMULÁRIO + PRÉVIA DA CAPA -->
+      <section class="admin-grid">
+        <!-- FORMULÁRIO PRINCIPAL -->
+        <form id="post-form" class="admin-card admin-form">
+          <h2>Nova publicação</h2>
+
+          <label class="field">
+            <span>Título *</span>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              required
+              placeholder="Ex.: Professora, artista e cosplayer, Quéren Garcia faz da arte sua liberdade"
+            />
+          </label>
+
+          <label class="field">
+            <span>Subtítulo / linha fina</span>
+            <input
+              type="text"
+              name="subtitle"
+              id="subtitle"
+              placeholder="Resumo curto da matéria"
+            />
+          </label>
+
+          <label class="field">
+            <span>Categoria</span>
+            <select name="category" id="category">
+              <option value="reportagem">Reportagem</option>
+              <option value="tutorial">Tutorial</option>
+              <option value="materia">Matéria especial</option>
+              <option value="evento">Evento</option>
+              <option value="galeria">Galeria</option>
+              <option value="outro">Outro</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Conteúdo simples (opcional)</span>
+            <textarea
+              name="content"
+              id="content"
+              rows="4"
+              placeholder="Para posts simples, use este campo. Para reportagens de capa/longas, monte o corpo da matéria nos blocos abaixo."
+            ></textarea>
+          </label>
+
+          <label class="field">
+            <span>Imagem de destaque (capa)</span>
+            <input type="file" id="image" accept="image/*" />
+            <small>Formatos: JPG, PNG, WEBP · Máx. ~5MB.</small>
+          </label>
+
+          <div class="admin-actions">
+            <button type="submit" class="btn-primary">
+              Publicar
+            </button>
+            <span id="form-status" class="form-status"></span>
+          </div>
+        </form>
+
+        <!-- PRÉ-VISUALIZAÇÃO DA IMAGEM DE CAPA -->
+        <section class="admin-card admin-preview">
+          <h2>Capa da publicação</h2>
+          <p class="text-muted">
+            A imagem de destaque da matéria aparece aqui. O texto do formulário
+            não é apagado ao escolher o arquivo.
+          </p>
+          <div class="preview-box" data-image-preview>
+            <img
+              id="image-preview"
+              alt="Pré-visualização da capa"
+              class="preview-img hidden"
+            />
+            <span class="preview-placeholder">
+              Nenhuma imagem selecionada.
+            </span>
+          </div>
+        </section>
+      </section>
+
+      <!-- BLOCOS DA REPORTAGEM (PARÁGRAFOS + FOTOS COM LEGENDA) -->
+      <section class="admin-card" id="blocks-section">
+        <h2>Corpo da reportagem</h2>
+        <p class="text-muted">
+          Para matérias no modelo da Quéren / Cosmakelab: adicione parágrafos e
+          fotos com legenda, na ordem que devem aparecer na página da
+          reportagem.
+        </p>
+
+        <div id="blocks-container"></div>
+
+        <div class="admin-actions">
+          <button type="button" id="add-text-block" class="btn-secondary">
+            + Parágrafo
+          </button>
+          <button type="button" id="add-image-block" class="btn-secondary">
+            + Foto com legenda
+          </button>
+        </div>
+      </section>
+
+      <!-- LISTA DE POSTS EXISTENTES -->
+      <section class="admin-card admin-list">
+        <div class="admin-list-header">
+          <h2>Publicações existentes</h2>
+          <button id="reload-posts" type="button" class="btn-secondary">
+            Recarregar lista
+          </button>
+        </div>
+        <ul id="posts-list" class="posts-list"></ul>
+        <p id="posts-empty" class="text-muted">
+          Nenhuma publicação cadastrada ainda.
+        </p>
+      </section>
+    </main>
+
+    <!-- CONFIG E JS DO PAINEL -->
+    <script src="/assents/config.js"></script>
+    <script type="module" src="/frontend/admin.js"></script>
+  </body>
+</html>

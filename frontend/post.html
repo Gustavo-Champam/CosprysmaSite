@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notícia – Cosprysma</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="bg-mesh" aria-hidden="true"></div>
+
+    <header class="topbar glass">
+      <div class="container nav-flex">
+        <a class="brand" href="index.html" aria-label="Página inicial">
+          <img src="../img/logoprincipal.jpeg" alt="" width="32" height="32" />
+          <span>Cosprysma</span>
+        </a>
+        <nav class="mainnav" id="nav">
+          <a href="index.html">Início</a>
+          <a href="estrela.html">Estrela da Semana</a>
+          <a href="fanart.html">Fanart</a>
+          <a href="flashcosplay.html">Flashcosplay</a>
+          <a href="agenda.html">Agenda</a>
+          <a href="tutoriais.html">Cosmakelab</a>
+          <a href="falacosplay.html">Fala Cosplay</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="contato.html">Contato</a>
+          <a class="cta" href="fala.html">Fala, Cosplayer!</a>
+        </nav>
+        <div class="nav-actions">
+          <button
+            id="theme-toggle"
+            class="icon-btn"
+            aria-label="Alternar tema"
+          >
+            Tema
+          </button>
+          <button
+            id="burger"
+            class="icon-btn burger"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container narrow">
+      <article id="post" class="card glass" style="margin-top: 24px; padding: 18px">
+        <p class="kicker" id="post-category"></p>
+        <h1 id="post-title"></h1>
+        <p class="muted" id="post-subtitle"></p>
+        <p class="muted" id="post-date" style="margin-bottom: 16px"></p>
+
+        <p id="post-intro" class="lead"></p>
+
+        <section id="post-slideshow" class="post-slideshow">
+          <div class="slide-main">
+            <img id="slide-image" alt="" />
+            <p id="slide-caption" class="muted"></p>
+          </div>
+          <div class="slide-thumbs" id="slide-thumbs"></div>
+        </section>
+      </article>
+    </main>
+
+    <button class="to-top" aria-label="Voltar ao topo">Topo</button>
+
+    <script src="/assents/config.js" defer></script>
+    <script src="/assents/main.js" defer></script>
+    <script src="/assents/post.js" defer></script>
+  </body>
+</html>

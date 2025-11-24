@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reportagem – Cosprysma</title>
+    <meta
+      name="description"
+      content="Reportagem do jornal comunitário de cosplay Cosprysma."
+    />
+    <meta name="theme-color" content="#7C3AED" />
+
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" href="../img/logoprincipal.jpeg" />
+    <link rel="apple-touch-icon" href="../icons/icon-192.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="bg-mesh" aria-hidden="true"></div>
+
+    <!-- NAVBAR PADRÃO -->
+    <header class="topbar glass">
+      <div class="container nav-flex">
+        <a class="brand" href="index.html" aria-label="Página inicial">
+          <img src="../img/logoprincipal.jpeg" alt="" width="32" height="32" />
+          <span>Cosprysma</span>
+        </a>
+        <nav class="mainnav" id="nav">
+          <a href="index.html">Início</a>
+          <a href="estrela.html">Estrela da Semana</a>
+          <a href="fanart.html">Fanart</a>
+          <a href="flashcosplay.html">Flashcosplay</a>
+          <a href="agenda.html">Agenda</a>
+          <a href="tutoriais.html">Cosmakelab</a>
+          <a href="falacosplay.html">Fala Cosplay</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="contato.html">Contato</a>
+          <a class="cta" href="fala.html">Fala, Cosplayer!</a>
+          <a class="admin-link" href="login.html">Área do admin</a>
+        </nav>
+        <div class="nav-actions">
+          <button
+            id="theme-toggle"
+            class="icon-btn"
+            aria-label="Alternar tema"
+          >
+            Tema
+          </button>
+          <button
+            id="burger"
+            class="icon-btn burger"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="reveal" id="article-wrapper">
+        <header class="section-head">
+          <p class="kicker" id="article-kicker">Reportagem</p>
+          <h1 id="article-title">Carregando...</h1>
+          <p class="muted" id="article-subtitle"></p>
+        </header>
+
+        <article class="card glass">
+          <div class="card__body" id="article-body"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer glass">
+      <div class="container footer-grid">
+        <section>
+          <h4>Sobre</h4>
+          <p>
+            O Cosprysma é um jornal comunitário feito por e para cosplayers.
+            Participe, envie fotos e matérias!
+          </p>
+        </section>
+        <section>
+          <h4>Redes</h4>
+          <ul class="inline-list">
+            <li>
+              <a
+                href="https://www.instagram.com/cosprysma_/?igsh=MXYxMDB0dWZhem9ncw%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="copyright">
+        © 2025 Cosprysma. Feito pela comunidade.
+      </div>
+    </footer>
+
+    <button class="to-top" aria-label="Voltar ao topo">Topo</button>
+
+    <script src="/assents/config.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const backendURL =
+          (window.APP && window.APP.BACKEND_URL) ||
+          "http://localhost:4000";
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        const titleEl = document.getElementById("article-title");
+        const subtitleEl = document.getElementById("article-subtitle");
+        const bodyEl = document.getElementById("article-body");
+
+        if (!id) {
+          titleEl.textContent = "Reportagem não encontrada";
+          bodyEl.innerHTML =
+            "<p class='muted'>Nenhum ID foi informado na URL.</p>";
+          return;
+        }
+
+        try {
+          const resp = await fetch(`${backendURL}/api/posts/${id}`);
+          if (!resp.ok) {
+            throw new Error("Erro ao buscar reportagem");
+          }
+          const post = await resp.json();
+
+          document.title = `${post.title} – Cosprysma`;
+          titleEl.textContent = post.title || "Reportagem";
+          subtitleEl.textContent = post.subtitle || post.excerpt || "";
+
+          bodyEl.innerHTML = "";
+
+          const blocks = Array.isArray(post.blocks) ? post.blocks : [];
+          if (blocks.length) {
+            blocks.forEach((block) => {
+              if (block.type === "text") {
+                const p = document.createElement("p");
+                p.textContent = block.text;
+                bodyEl.appendChild(p);
+              } else if (block.type === "image" && block.url) {
+                const wrapper = document.createElement("div");
+                wrapper.className = "gallery-justified";
+                wrapper.style.margin = "1.5rem 0";
+
+                const figure = document.createElement("figure");
+                const img = document.createElement("img");
+                img.src = backendURL + block.url;
+                img.loading = "lazy";
+                img.alt = block.caption || post.title || "Foto da reportagem";
+
+                const figc = document.createElement("figcaption");
+                figc.className = "muted";
+                figc.innerHTML =
+                  (block.caption || "") +
+                  (block.caption ? "<br />" : "") +
+                  "Foto: arquivo pessoal / divulgação.";
+
+                figure.appendChild(img);
+                figure.appendChild(figc);
+                wrapper.appendChild(figure);
+                bodyEl.appendChild(wrapper);
+              }
+            });
+          } else if (post.content) {
+            // fallback: divide texto simples em parágrafos
+            post.content.split(/\n{2,}/).forEach((chunk) => {
+              const p = document.createElement("p");
+              p.textContent = chunk.trim();
+              bodyEl.appendChild(p);
+            });
+          } else {
+            bodyEl.innerHTML =
+              "<p class='muted'>Esta reportagem ainda não possui conteúdo.</p>";
+          }
+        } catch (err) {
+          console.error(err);
+          titleEl.textContent = "Erro ao carregar reportagem";
+          bodyEl.innerHTML =
+            "<p class='muted'>Tente novamente mais tarde.</p>";
+        }
+      });
+    </script>
+  </body>
+</html>

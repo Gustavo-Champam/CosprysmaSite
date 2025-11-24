@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login – Cosprysma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../img/logoprincipal.jpeg" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="auth-body">
+    <div class="bg-mesh" aria-hidden="true"></div>
+
+    <div class="auth-shell">
+      <div class="auth-brand">
+        <a href="index.html" class="brand">
+          <img
+            src="../img/logo.png"
+            alt=""
+            width="32"
+            height="32"
+          />
+          <span>Cosprysma – Área restrita</span>
+        </a>
+      </div>
+
+      <section class="card glass auth-card">
+        <h1>Login de administrador</h1>
+        <p class="muted">
+          Use o e-mail e senha definidos no arquivo <code>.env</code> do
+          backend.
+        </p>
+
+        <form id="login-form" class="auth-form">
+          <div>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" autocomplete="username" required />
+          </div>
+          <div>
+            <label for="password">Senha</label>
+            <input
+              id="password"
+              type="password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+          <button class="btn full" type="submit">Entrar</button>
+          <p id="login-error" class="error" hidden>
+            E-mail ou senha inválidos.
+          </p>
+        </form>
+      </section>
+    </div>
+
+    <script src="../assents/config.js" defer></script>
+    <script src="../assents/auth.js" defer></script>
+    <script src="/assents/config.js"></script>
+    <script src="/frontend/login.js"></script>
+  </body>
+</html>

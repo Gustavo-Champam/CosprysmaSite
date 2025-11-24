@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeria – Cosprysma</title>
+  <meta name="description" content="Galeria de fotos de cosplay: registros de eventos, ensaios e fanarts enviados pela comunidade." />
+  <meta name="theme-color" content="#7C3AED" />
+
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="img/logoprincipal.jpeg" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Cosprysma",
+    "url":"https://cosprysma.example",
+    "logo":"https://cosprysma.example/icons/icon-512.png",
+    "sameAs":[
+      "https://www.instagram.com/cosprysma_/?igsh=MXYxMDB0dWZhem9ncw%3D%3D&utm_source=qr"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+
+  <header class="topbar glass">
+    <div class="container nav-flex">
+      <a class="brand" href="index.html" aria-label="Página inicial">
+          <img src="/img/logo.png" alt="Cosprysma" width="32" height="32" />
+        <span>Cosprysma</span>
+      </a>
+      <nav class="mainnav" id="nav">
+        <a href="index.html">Início</a>
+        <a href="estrela.html">Estrela da Semana</a>
+        <a href="fanart.html">Fanart</a>
+        <a href="flashcosplay.html">Flashcosplay</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="tutoriais.html">Cosmakelab</a>
+        <a href="falacosplay.html">Fala Cosplay</a>
+        <a href="galeria.html" aria-current="page">Galeria</a>
+        <a href="contato.html">Contato</a>
+        <a class="cta" href="fala.html">Fala, Cosplayer!</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Alternar tema">Tema</button>
+        <button id="burger" class="icon-btn burger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <header class="page-head">
+      <h1>Galeria de Cosplays</h1>
+      <p class="lead">Fotos enviadas pela comunidade e coberturas de eventos. Clique para ampliar.</p>
+    </header>
+
+    <div id="gallery" class="gallery-justified reveal"></div>
+
+    <!-- Lightbox -->
+    <template id="lb-tpl">
+      <div class="lightbox" data-lb>
+        <button class="lb-close" aria-label="Fechar">×</button>
+        <img class="lb-img" alt="Foto em destaque" />
+        <p class="lb-cap"></p>
+        <button class="lb-prev" aria-label="Anterior">‹</button>
+        <button class="lb-next" aria-label="Próxima">›</button>
+      </div>
+    </template>
+  </main>
+
+  <footer class="footer glass">
+    <div class="container footer-grid">
+      <section>
+        <h4>Sobre</h4>
+        <p>O Cosprysma é um jornal comunitário feito por e para cosplayers. Participe, envie fotos e matérias!</p>
+      </section>
+      <section>
+        <h4>Redes</h4>
+        <ul class="inline-list">
+          <li>
+            <a
+              href="https://www.instagram.com/cosprysma_/?igsh=MXYxMDB0dWZhem9ncw%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener"
+            >Instagram</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="copyright">© 2025 Cosprysma. Feito pela comunidade.</div>
+  </footer>
+
+  <button class="to-top" aria-label="Voltar ao topo">Topo</button>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Cosprysma – Jornal Comunitário de Cosplay",
+    "url":"https://cosprysma.example",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://cosprysma.example/?q={query}",
+      "query-input":"required name=query"
+    }
+  }
+  </script>
+
+  <script src="assents/main.js" defer></script>
+  <script src="assents/galeria.js" defer></script>
+</body>
+</html>

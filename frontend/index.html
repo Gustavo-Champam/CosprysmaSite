@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cosprysma – Jornal Comunitário de Cosplay</title>
+    <meta
+      name="description"
+      content="Jornal comunitário de cosplay: notícias, editorias diárias, agenda, galeria, tutoriais e participação da comunidade."
+    />
+    <meta name="theme-color" content="#7C3AED" />
+
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" href="../img/logoprincipal.jpeg" />
+    <link rel="apple-touch-icon" href="../icons/icon-192.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="bg-mesh" aria-hidden="true"></div>
+
+    <header class="topbar glass">
+      <div class="container nav-flex">
+        <a class="brand" href="index.html" aria-label="Página inicial">
+          <img src="../img/logo.png" alt="" width="32" height="32" />
+          <span>Cosprysma</span>
+        </a>
+        <nav class="mainnav" id="nav">
+          <a href="index.html">Início</a>
+          <a href="estrela.html">Estrela da Semana</a>
+          <a href="fanart.html">Fanart</a>
+          <a href="flashcosplay.html">Flashcosplay</a>
+          <a href="agenda.html">Agenda</a>
+          <a href="tutoriais.html">Cosmakelab</a>
+          <a href="falacosplay.html">Fala Cosplay</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="contato.html">Contato</a>
+          <a class="cta" href="fala.html">Fala, Cosplayer!</a>
+          <a class="admin-link" href="login.html">Área do admin</a>
+        </nav>
+        <div class="nav-actions">
+          <button
+            id="theme-toggle"
+            class="icon-btn"
+            aria-label="Alternar tema"
+          >
+            
+          </button>
+          <button
+            id="burger"
+            class="icon-btn burger"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__copy">
+          <p class="kicker">Jornal Comunitário de Cosplay</p>
+          <h1 class="headline">Cosplay é Comunidade</h1>
+          <p class="lead">
+            Perfis, reportagens, tutoriais e um espaço seguro para a sua arte.
+            Toda semana, uma nova estrela — todo dia, uma nova história.
+          </p>
+          <div class="row gap">
+            <a class="btn" href="editorias.html">Ver matérias de hoje</a>
+            <a class="btn ghost" href="fala.html">Enviar conteúdo</a>
+          </div>
+        </div>
+        <div class="hero__art">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+          <div class="ring"></div>
+        </div>
+      </section>
+
+      <!-- REPORTAGEM DE CAPA – TEASER -->
+      <section class="reveal">
+        <header class="section-head">
+          <p class="kicker">Reportagem de capa</p>
+          <h2>
+            Professora, artista e cosplayer, Quéren Garcia faz da arte sua
+            liberdade
+          </h2>
+        </header>
+
+        <article class="card glass">
+          <div class="card__body">
+            <div class="gallery-justified" style="margin-bottom: 1.5rem;">
+              <figure>
+                <img
+                  src="../img/reportagens/queren-misty.jpg"
+                  alt="Quéren Garcia caracterizada como Misty, do universo Pokémon"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <p class="muted">
+              Da infância premiada em concursos de desenho aos palcos dos
+              eventos de anime, Quéren Garcia, 23 anos, professora, artesã e
+              cosplayer, transforma a arte em sua forma de liberdade e
+              expressão. Em 2025, ela decidiu mergulhar de vez no universo do
+              cosplay, unindo desenho, música e performance para contar sua
+              própria história.
+            </p>
+
+            <p style="margin-top: 1rem;">
+              <a
+                href="reportagem-queren-garcia.html"
+                class="btn"
+                style="text-decoration: none;"
+              >
+                Ler reportagem completa
+              </a>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- 3 CARDS PRINCIPAIS -->
+      <section class="cards three reveal">
+        <article class="card gradient-border">
+          <img
+            src="../img/galeria/IMG_8966.jpg"
+            alt="Destaques do jornal comunitário de cosplay"
+            loading="lazy"
+          />
+          <div class="card__body">
+            <h3>Editorias do dia</h3>
+            <p>
+              Estrela da Semana, Fanart, Flashcosplay, Agenda, Cosmakelab e
+              Fala Cosplay — tudo em um só lugar.
+            </p>
+            <a class="link" href="editorias.html">Ler editorias</a>
+          </div>
+        </article>
+
+        <article class="card gradient-border">
+          <img
+            src="../img/galeria/IMG_9008.jpg"
+            alt="Próximos eventos de cosplay"
+            loading="lazy"
+          />
+          <div class="card__body">
+            <h3>Próximos eventos</h3>
+            <p>
+              Consulte convenções, encontros, campeonatos e ações da comunidade
+              perto de você.
+            </p>
+            <a class="link" href="agenda.html">Abrir agenda</a>
+          </div>
+        </article>
+
+        <article class="card gradient-border">
+          <img
+            src="../img/galeria/IMG_9042.jpg"
+            alt="Tutoriais e dicas de cosplay"
+            loading="lazy"
+          />
+          <div class="card__body">
+            <h3>Tutoriais &amp; Cosmakelab</h3>
+            <p>
+              Maquiagem, peruca, figurino, props e truques de palco — passo a
+              passo com fotos.
+            </p>
+            <a class="link" href="tutoriais.html">Aprender agora</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- HOJE NO COSPRYSMA -->
+      <section class="reveal">
+        <header class="section-head">
+          <h2>Hoje no Cosprysma</h2>
+          <a class="link" href="editorias.html">Ver todas as editorias</a>
+        </header>
+        <div id="home-editorias" class="cards three"></div>
+      </section>
+
+      <!-- EDIÇÃO MENSAL -->
+      <section class="card glass reveal" style="margin-top: 2rem">
+        <header class="section-head">
+          <h2>Edição mensal</h2>
+          <a class="link" href="edicao-mensal.html">Ver edição completa</a>
+        </header>
+        <p class="muted">
+          Todo mês, uma edição especial com reportagens aprofundadas,
+          entrevistas longas e debates sobre representatividade, economia do
+          cosplay e histórias reais da comunidade.
+        </p>
+      </section>
+
+      <!-- FOTOS RECENTES -->
+      <section class="reveal">
+        <header class="section-head">
+          <h2>Fotos recentes</h2>
+          <a class="link" href="galeria.html">Ver galeria completa</a>
+        </header>
+        <div id="recent-photos" class="gallery-justified"></div>
+      </section>
+    </main>
+
+    <footer class="footer glass">
+      <div class="container footer-grid">
+        <section>
+          <h4>Sobre</h4>
+          <p>
+            O Cosprysma é um jornal comunitário feito por e para cosplayers.
+            Participe, envie fotos e matérias!
+          </p>
+        </section>
+        <section>
+          <h4>Redes</h4>
+          <ul class="inline-list">
+            <li>
+              <a
+                href="https://www.instagram.com/cosprysma_/?igsh=MXYxMDB0dWZhem9ncw%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="copyright">
+        © 2025 Cosprysma. Feito pela comunidade.
+      </div>
+    </footer>
+
+    <button class="to-top" aria-label="Voltar ao topo">Topo</button>
+
+    <script src="/assents/config.js" defer></script>
+    <script src="/assents/main.js" defer></script>
+    <script src="/assents/home.js" defer></script>
+  </body>
+</html>
