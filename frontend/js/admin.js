@@ -1,5 +1,5 @@
 // frontend/js/admin.js
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'https://cosprysmasite.onrender.com';
 
 const form = document.getElementById('post-form');
 const inputTitulo = document.getElementById('titulo');

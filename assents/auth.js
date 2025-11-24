@@ -5,7 +5,7 @@
   if (!form) return;
 
   const backend =
-    (window.APP && window.APP.BACKEND_URL) || 'http://localhost:4000';
+    (window.APP && window.APP.BACKEND_URL) || 'https://cosprysmasite.onrender.com';
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();

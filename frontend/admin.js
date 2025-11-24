@@ -1,7 +1,7 @@
 // frontend/admin.js
 (function () {
   const backendURL =
-    (window.APP && window.APP.BACKEND_URL) || "http://localhost:4000";
+    (window.APP && window.APP.BACKEND_URL) || "https://cosprysmasite.onrender.com";
 
   // Aceita token salvo como cosprysma_token ou voll_token
   const TOKEN_KEYS = ["cosprysma_token", "voll_token"];

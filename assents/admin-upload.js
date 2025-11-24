@@ -1,7 +1,7 @@
 // js/admin-upload.js
 
 // Ajusta aqui se seu backend estiver em outra URL/porta
-const API_BASE = "http://localhost:4000";
+const API_BASE = "https://cosprysmasite.onrender.com";
 
 const uploadForm = document.getElementById("upload-form");
 const uploadStatus = document.getElementById("upload-status");

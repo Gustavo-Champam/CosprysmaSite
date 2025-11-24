@@ -5,7 +5,7 @@
 
   // Mesmo BACKEND_URL do resto do site
   const backendURL =
-    (window.APP && window.APP.BACKEND_URL) || "http://localhost:4000";
+    (window.APP && window.APP.BACKEND_URL) || "https://cosprysmasite.onrender.com";
 
   if (!form) return;
 

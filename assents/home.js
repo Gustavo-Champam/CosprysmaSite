@@ -1,7 +1,7 @@
 // assents/home.js
 (function () {
   const backend =
-    (window.APP && window.APP.BACKEND_URL) || 'http://localhost:4000';
+    (window.APP && window.APP.BACKEND_URL) || 'https://cosprysmasite.onrender.com';
   const container = document.getElementById('home-editorias');
   if (!container) return;
 
