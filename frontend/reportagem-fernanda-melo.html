@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#7C3AED" />
 
     <link rel="manifest" href="../manifest.webmanifest" />
-    <link rel="icon" href="../img/logoprincipal.jpeg" />
+    <link rel="icon" href="../img/logo.jpg" />
     <link rel="apple-touch-icon" href="../icons/icon-192.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
@@ -26,7 +26,7 @@
   <body>
     <div class="bg-mesh" aria-hidden="true"></div>
 
-    <!-- TOPO / MENU -->
+    <!-- TOPO / MENU IGUAL AO DA QUÉREN -->
     <header class="topbar glass">
       <div class="container nav-flex">
         <a class="brand" href="index.html" aria-label="Página inicial">
@@ -64,10 +64,9 @@
 
     <main class="container feature-page">
       <section class="feature-article glass">
-        <!-- CABEÇALHO IGUAL DA QUÉREN -->
+        <!-- CABEÇALHO DA REPORTAGEM (MESMO PADRÃO DA QUÉREN) -->
         <header class="feature-article-header">
           <div class="feature-label-card">
-            <span class="feature-label">Reportagem</span>
           </div>
 
           <div class="feature-header-copy">
@@ -80,25 +79,7 @@
 
         <!-- CORPO DA MATÉRIA -->
         <article class="feature-body">
-          <!-- DUAS FOTOS LADO A LADO -->
-          <div class="article-media article-media--split">
-            <figure class="article-media-image">
-              <img
-                src="../img/reportagens/fernanda-1.jpg"
-                alt="Braço tatuado com desenhos de cultura pop feitos por Fernanda Vieira Melo"
-                loading="lazy"
-              />
-            </figure>
-            <figure class="article-media-image">
-              <img
-                src="../img/reportagens/fernanda-2.jpg"
-                alt="Outro braço tatuado com temas geek e cultura pop por Fernanda Vieira Melo"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-
-          <!-- TEXTO ORIGINAL, SEM MUDAR NADA -->
+          <!-- TEXTO ANTES DA PRIMEIRA FOTO (PÁGINA 1 DO PDF) -->
           <p>
             Quando um gosto pessoal se transforma em obsessão ou fanatismo, uma das
             maiores vontades de um grande fã é eternizar aquilo na própria pele.
@@ -121,12 +102,31 @@
             de tatuagem.
           </p>
 
+          <!-- TRECHO DO PDF (PÁG. 2) ANTES DA PRIMEIRA IMAGEM -->
           <p>
             “O fâ tem uma emoção diferente, um olhar que brilha mais. E se é algo que eu
             também sou fã, acaba criando uma conexão maior ainda no momento da sessão”,
             descreve Fernanda.
           </p>
 
+          <!-- PRIMEIRA IMAGEM (DEPOIS DO TRECHO ACIMA, IGUAL AO PDF) -->
+          <div class="article-media">
+            <figure class="article-media-image">
+              <img
+                src="../img/reportagens/fernanda-1.jpg"
+                alt="Tatuagens de cultura pop feitas por Fernanda Vieira Melo"
+                loading="lazy"
+              />
+            </figure>
+            <div class="article-media-text">
+              <p>
+                Tatuagens inspiradas em elementos da cultura pop, eternizando paixões na pele.
+              </p>
+              <p>Foto: arquivo pessoal / Fernanda Vieira Melo.</p>
+            </div>
+          </div>
+
+          <!-- TEXTO ENTRE AS DUAS IMAGENS (PÁG. 3 DO PDF) -->
           <p>
             Um tatuador lida com fãs diariamente, algo que fica mais fácil e leve quando o
             próprio faz parte desse universo. Entende o sentimento de gostar tanto de algo, a
@@ -150,6 +150,24 @@
             uma composição com o meu estilo.”
           </p>
 
+          <!-- SEGUNDA IMAGEM (DEPOIS DO PARÁGRAFO ACIMA, IGUAL AO PDF) -->
+          <div class="article-media article-media--right">
+            <figure class="article-media-image">
+              <img
+                src="../img/reportagens/fernanda-2.jpg"
+                alt="Braço tatuado com personagem de cultura pop por Fernanda Vieira Melo"
+                loading="lazy"
+              />
+            </figure>
+            <div class="article-media-text">
+              <p>
+                Cada desenho carrega uma história: personagem, banda ou momento marcante.
+              </p>
+              <p>Foto: arquivo pessoal / Fernanda Vieira Melo.</p>
+            </div>
+          </div>
+
+          <!-- TEXTO FINAL (PÁG. 4 DO PDF) -->
           <p>
             Para saber mais sobre o trabalho de Fernanda, você pode encontrá-la no Instagram
             @fernandamelo.ink
