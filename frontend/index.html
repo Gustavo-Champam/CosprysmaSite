@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cosprysma – Jornal cosplay comunitário</title>
+    <title>Cosprysma – Jornal Comunitário de Cosplay</title>
     <meta
       name="description"
-      content="Jornal comunitário feito por e para cosplayers: entrevistas, fanarts, flashcosplays, agenda de eventos e tutoriais de criação."
+      content="Jornal comunitário de cosplay: notícias, editorias diárias, agenda, galeria, tutoriais e participação da comunidade."
     />
     <meta name="theme-color" content="#7C3AED" />
 
-    <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="icon" href="img/logo.jpg" />
-    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" href="../img/logo.jpg" />
+    <link rel="apple-touch-icon" href="../icons/icon-192.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,14 +26,12 @@
   <body>
     <div class="bg-mesh" aria-hidden="true"></div>
 
-    <!-- TOPO / NAVBAR -->
     <header class="topbar glass">
       <div class="container nav-flex">
         <a class="brand" href="index.html" aria-label="Página inicial">
-          <img src="img/logo.png" alt="" width="32" height="32" />
+          <img src="../img/logo.png" alt="" width="32" height="32" />
           <span>Cosprysma</span>
         </a>
-
         <nav class="mainnav" id="nav">
           <a href="index.html" aria-current="page">Início</a>
           <a href="reportagem-queren-garcia.html">Estrela da Semana</a>
@@ -47,7 +45,6 @@
           <a class="cta" href="fala.html">Fala, Cosplayer!</a>
           <a class="admin-link" href="login.html">Área do admin</a>
         </nav>
-
         <div class="nav-actions">
           <button
             id="theme-toggle"
@@ -69,29 +66,17 @@
     <main class="container">
       <!-- HERO -->
       <section class="hero">
-        <div class="hero__copy reveal">
-          <p class="kicker">Jornal cosplay comunitário</p>
-          <h1 class="headline">Cosplay, arte e histórias em primeira pessoa</h1>
+        <div class="hero__copy">
+          <p class="kicker">Jornal Comunitário de Cosplay</p>
+          <h1 class="headline">Cosplay é Comunidade</h1>
           <p class="lead">
-            Entrevistas, fanarts, flashcosplays, agenda de eventos e tutoriais
-            feitos por quem vive o universo geek. Um espaço para destacar a
-            cena cosplay de Itapetininga e região.
+            Perfis, reportagens, tutoriais e um espaço seguro para a sua arte.
+            Toda semana, uma nova estrela — todo dia, uma nova história.
           </p>
-
-          <div class="row gap" style="margin-top:1.2rem;">
-            <a href="falacosplay.html" class="btn">
-              Ver entrevistas
-            </a>
-            <a href="fala.html" class="btn ghost">
-              Quero aparecer no Cosprysma
-            </a>
+          <div class="row gap">
+            <a class="btn ghost" href="fala.html">Enviar conteúdo</a>
           </div>
-
-          <p class="muted" style="margin-top:0.75rem;font-size:0.9rem;">
-            Feito pela comunidade, para a comunidade. 💜
-          </p>
         </div>
-
         <div class="hero__art">
           <div class="orb orb-1"></div>
           <div class="orb orb-2"></div>
@@ -100,301 +85,257 @@
         </div>
       </section>
 
-      <!-- DESTAQUES PRINCIPAIS -->
-      <section class="reveal" aria-labelledby="home-destaques">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Destaques</p>
-            <h2 id="home-destaques">O que tá brilhando agora</h2>
-          </div>
-          <a href="galeria.html" class="link">Ver mais registros →</a>
-        </div>
+      <!-- REPORTAGEM DE CAPA – QUÉREN -->
+      <section class="reveal">
+        <header class="section-head">
+          <h2>
+            Professora, artista e cosplayer, Quéren Garcia faz da arte sua
+            liberdade
+          </h2>
+        </header>
 
-        <div class="cards three" style="margin-top:14px;">
-          <!-- Estrela da semana -->
-          <article class="card gradient-border glass">
-            <img
-              src="img/reportagens/queren-1.jpg"
-              alt="Cosplayer Queren Garcia caracterizada em evento."
-              loading="lazy"
-            />
-            <div class="card__body">
-              <p class="pill">
-                <span>Estrela da Semana</span>
-              </p>
-              <h3>Queren Garcia brilha com cosplays cheios de presença</h3>
-              <p class="muted" style="font-size:0.9rem;">
-                Paixão por palco, detalhes de figurino e o apoio da família na
-                construção de cada personagem.
-              </p>
-              <p style="margin-top:0.4rem;">
-                <a href="reportagem-queren-garcia.html" class="link">
-                  Ler matéria completa →
-                </a>
-              </p>
+        <article class="card glass">
+          <div class="card__body">
+            <div class="gallery-justified" style="margin-bottom: 1.5rem;">
+              <figure>
+                <img
+                  src="../img/reportagens/queren-misty.jpg"
+                  alt="Quéren Garcia caracterizada como Misty, do universo Pokémon"
+                  loading="lazy"
+                />
+              </figure>
             </div>
-          </article>
 
-          <!-- Fanart -->
-          <article class="card gradient-border glass">
-            <img
-              src="img/reportagens/fernanda-1.jpg"
-              alt="Obras de fanart de Fernanda Melo espalhadas sobre uma mesa."
-              loading="lazy"
-            />
-            <div class="card__body">
-              <p class="pill">
-                <span>Fanart</span>
-              </p>
-              <h3>Ilustrações que transformam personagens em afeto</h3>
-              <p class="muted" style="font-size:0.9rem;">
-                Fernanda Melo fala sobre processo criativo, referências e o que
-                a motiva a desenhar o tempo todo.
-              </p>
-              <p style="margin-top:0.4rem;">
-                <a href="reportagem-fernanda-melo.html" class="link">
-                  Ler matéria completa →
-                </a>
-              </p>
-            </div>
-          </article>
+            <p class="muted">
+              Da infância premiada em concursos de desenho aos palcos dos
+              eventos de anime, Quéren Garcia, 23 anos, professora, artesã e
+              cosplayer, transforma a arte em sua forma de liberdade e
+              expressão. Em 2025, ela decidiu mergulhar de vez no universo do
+              cosplay, unindo desenho, música e performance para contar sua
+              própria história.
+            </p>
 
-          <!-- Flashcosplay -->
-          <article class="card gradient-border glass">
-            <img
-              src="img/reportagens/hidan-1.jpg"
-              alt="Cosplayer Hidan Dosu posando com espada em evento."
-              loading="lazy"
-            />
-            <div class="card__body">
-              <p class="pill">
-                <span>Flashcosplay</span>
-              </p>
-              <h3>Cliques rápidos, cosplays inesquecíveis</h3>
-              <p class="muted" style="font-size:0.9rem;">
-                Hidan Dosu conta como começou e por que adora ser reconhecido
-                pelos personagens que interpreta.
-              </p>
-              <p style="margin-top:0.4rem;">
-                <a href="reportagem-hidan-dosu.html" class="link">
-                  Ver flashcosplay →
-                </a>
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- FALA COSPLAYER – ÚLTIMAS ENTREVISTAS -->
-      <section class="reveal" aria-labelledby="home-fala" style="margin-top:32px;">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Fala Cosplayer</p>
-            <h2 id="home-fala">Vozes da comunidade</h2>
-            <p class="lead">
-              Entrevistas com cosplayers que dividem histórias de bastidor,
-              processo criativo e amor pelo cosplay.
+            <p style="margin-top: 1rem;">
+              <a
+                href="reportagem-queren-garcia.html"
+                class="btn"
+                style="text-decoration: none;"
+              >
+                Ler reportagem completa
+              </a>
             </p>
           </div>
-          <a href="falacosplay.html" class="link">Ver todas as entrevistas →</a>
-        </div>
+        </article>
+      </section>
 
-        <div class="cards-list">
-          <!-- Márcio -->
-          <article class="card card-media card--fala glass">
-            <img
-              src="img/reportagens/fala-marcio-1.jpg"
-              alt="Márcio em cosplay durante apresentação em evento geek."
-              loading="lazy"
+      <!-- OUTRA REPORTAGEM – FERNANDA -->
+      <section class="reveal">
+        <header class="section-head">
+          <h2>De fã para fã</h2>
+        </header>
+
+        <article class="card glass">
+          <div class="card__body">
+            <div class="gallery-justified" style="margin-bottom: 1.5rem;">
+              <figure>
+                <img
+                  src="../img/reportagens/fernanda-1.jpg"
+                  alt="Tatuagens de cultura pop feitas por Fernanda Vieira Melo"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <p class="muted">
+              Quando um gosto pessoal se transforma em fanatismo, a tatuagem
+              vira forma de eternizar a cultura pop na pele — de fã para fã.
+            </p>
+
+            <p style="margin-top: 1rem;">
+              <a
+                href="reportagem-fernanda-melo.html"
+                class="btn"
+                style="text-decoration: none;"
+              >
+                Ler reportagem completa
+              </a>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- NOVA REPORTAGEM – FLASHCOSPLAY HIDAN & DOSU -->
+      <section class="reveal">
+        <header class="section-head">
+          <h2>Flashcosplay em destaque</h2>
+        </header>
+
+        <article class="card glass">
+          <div class="card__body">
+            <div class="gallery-justified" style="margin-bottom: 1.5rem;">
+              <figure>
+                <img
+                  src="../img/reportagens/flash-hidan-dosu-1.jpg"
+                  alt="Julia e Olises como Hidan e Dosu, vilões de Naruto, no Anime Arts."
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <p class="muted">
+              Do “faça você mesmo” ao figurino profissional, o Anime Arts mostrou
+              que cosplay é mais do que fantasia: é construção artística. Julia
+              e Olises dão vida aos vilões Hidan e Dosu, com direito a foice
+              tripla, carapaça aveludada e muito trabalho de cosmaker.
+            </p>
+
+            <p style="margin-top: 1rem;">
+              <a
+                href="reportagem-hidan-dosu.html"
+                class="btn"
+                style="text-decoration: none;"
+              >
+                Ler reportagem completa
+              </a>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- REPORTAGEM – AGENDA CULTURAL -->
+      <section class="reveal">
+        <header class="section-head">
+          <h2>Agenda cultural</h2>
+        </header>
+
+        <article class="card glass">
+          <div class="card__body">
+            <p class="muted">
+              Encontros, festas e convenções em Curitiba, Rio de Janeiro e
+              Macaé: ACE 2025, Bailão Cosplay, Rolé Favela Geek, Cosfantasy
+              Fest, Listen Kpop, KPOP Idols e Impacto Geek 2025. Veja datas,
+              locais, faixa de preços e onde garantir ingresso.
+            </p>
+
+            <p style="margin-top: 1rem;">
+              <a
+                href="reportagem-agenda-cultural.html"
+                class="btn"
+                style="text-decoration: none;"
+              >
+                Ver agenda completa
+              </a>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- VOZES DA COMUNIDADE – MARCIO & DOUGLAS -->
+      <section class="reveal">
+        <header class="section-head">
+          <h2>Vozes da comunidade</h2>
+          <a class="link" href="falacosplay.html">Ver todas as entrevistas</a>
+        </header>
+
+        <div class="grid.two">
+          <article class="card gradient-border">
             />
-            <div class="card-body">
-              <p class="meta">Entrevista · Fala Cosplayer</p>
+            <div class="card__body">
               <h3>“Fala, Cosplayer!” – Márcio</h3>
-              <p class="post-content">
+              <p class="muted" style="font-size: 0.9rem;">
                 Entre bastidores de apresentações, figurinos coloridos e carinho
                 do público, Márcio conta como o cosplay virou parte da rotina e
                 da vida em família.
               </p>
-              <p style="margin-top:0.4rem;">
-                <a href="fala-cosplayer-marcio.html" class="link">
-                  Ler entrevista →
-                </a>
-              </p>
+              <a class="btn ghost" href="fala-cosplayer-marcio.html">Ler entrevista</a>
             </div>
           </article>
 
-          <!-- Douglas -->
-          <article class="card card-media card--fala glass">
-            <img
-              src="img/reportagens/fala-douglas-1.jpg"
-              alt="Douglas Rodrigues caracterizado em cosplay durante evento."
-              loading="lazy"
+          <article class="card gradient-border">
             />
-            <div class="card-body">
-              <p class="meta">Entrevista · Fala Cosplayer</p>
+            <div class="card__body">
               <h3>“Fala, Cosplayer!” – Douglas Rodrigues</h3>
-              <p class="post-content">
-                Cosplays cheios de presença, amizade construída em eventos e a
-                importância da representatividade na cultura pop.
+              <p class="muted" style="font-size: 0.9rem;">
+                Cosplays cheios de presença de palco, amizade construída em
+                eventos e a importância da representatividade na cultura pop:
+                Douglas compartilha sua trajetória na cena.
               </p>
-              <p style="margin-top:0.4rem;">
-                <a href="fala-cosplayer-douglas.html" class="link">
-                  Ler entrevista →
-                </a>
-              </p>
+              <a class="btn ghost" href="fala-cosplayer-douglas.html">Ler entrevista</a>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- COSMAKELAB / TUTORIAIS -->
-      <section class="reveal" aria-labelledby="home-cosmakelab" style="margin-top:32px;">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Cosmakelab</p>
-            <h2 id="home-cosmakelab">Tutoriais para tirar ideias do papel</h2>
-            <p class="lead">
-              Passo a passo de maquiagem, peruca, props e ajustes de figurino
-              feitos por quem já errou e acertou muito nos bastidores.
+      <!-- 3 CARDS PRINCIPAIS -->
+      <section class="cards three reveal">
+        <article class="card gradient-border">
+          <img
+            src="../img/galeria/IMG_8966.jpg"
+            alt="Destaques do jornal comunitário de cosplay"
+            loading="lazy"
+          />
+          <div class="card__body">
+            <h3>Editorias do dia</h3>
+            <p>
+              Estrela da Semana, Fanart, Flashcosplay, Agenda, Cosmakelab e
+              Fala Cosplay — tudo em um só lugar.
             </p>
+            <a class="link" href="editorias.html">Ler editorias</a>
           </div>
-          <a href="tutoriais.html" class="link">Ver todos os tutoriais →</a>
-        </div>
+        </article>
 
-        <div class="cards three" style="margin-top:14px;">
-          <article class="card glass">
-            <img
-              src="img/cosmakelab-make-1.jpg"
-              alt="Maquiagem artística colorida sendo aplicada perto dos olhos."
-              loading="lazy"
-            />
-            <div class="card__body">
-              <h3>Maquiagem de palco que aguenta o evento inteiro</h3>
-              <p class="muted" style="font-size:0.9rem;">
-                Dicas de produtos, preparação de pele e truques para o make não
-                derreter no calor do evento.
-              </p>
-              <p style="margin-top:0.4rem;">
-                <a href="tutoriais.html#maquiagem" class="link">
-                  Abrir tutorial →
-                </a>
-              </p>
-            </div>
-          </article>
-
-          <article class="card glass">
-            <img
-              src="img/cosmakelab-peruca-1.jpg"
-              alt="Cosplayer ajustando uma peruca colorida em frente ao espelho."
-              loading="lazy"
-            />
-            <div class="card__body">
-              <h3>Perucas: corte, estilização e cuidados</h3>
-              <p class="muted" style="font-size:0.9rem;">
-                Como desfiar, modelar franja, usar heat-resistant e guardar sem
-                destruir os fios.
-              </p>
-              <p style="margin-top:0.4rem;">
-                <a href="tutoriais.html#perucas" class="link">
-                  Abrir tutorial →
-                </a>
-              </p>
-            </div>
-          </article>
-
-          <article class="card glass">
-            <img
-              src="img/cosmakelab-props-1.jpg"
-              alt="Props de espada e armadura sobre uma mesa de trabalho."
-              loading="lazy"
-            />
-            <div class="card__body">
-              <h3>Props leves que parecem de metal</h3>
-              <p class="muted" style="font-size:0.9rem;">
-                EVA, cola de contato, pintura metálica e acabamentos que fazem
-                diferença nas fotos.
-              </p>
-              <p style="margin-top:0.4rem;">
-                <a href="tutoriais.html#props" class="link">
-                  Abrir tutorial →
-                </a>
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- AGENDA / PRÓXIMOS EVENTOS -->
-      <section class="reveal" aria-labelledby="home-agenda" style="margin-top:32px;">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Agenda</p>
-            <h2 id="home-agenda">Próximos rolês cosplay</h2>
-            <p class="lead">
-              Eventos, encontros e oportunidades para testar aquele cosplay novo
-              ou estrear um personagem.
+        <article class="card gradient-border">
+          <img
+            src="../img/galeria/IMG_9008.jpg"
+            alt="Próximos eventos de cosplay"
+            loading="lazy"
+          />
+          <div class="card__body">
+            <h3>Próximos eventos</h3>
+            <p>
+              Consulte convenções, encontros, campeonatos e ações da comunidade
+              perto de você.
             </p>
+            <a class="link" href="agenda.html">Abrir agenda</a>
           </div>
-          <a href="reportagem-agenda-cultural.html" class="link">
-            Ver agenda completa →
-          </a>
-        </div>
+        </article>
 
-        <ul class="events">
-          <li>
-            <div class="row">
-              <div>
-                <strong>Encontro cosplay no parque</strong>
-                <p class="muted" style="margin:2px 0 0;font-size:0.9rem;">
-                  Domingo à tarde, sessão de fotos em grupo e roda de conversa
-                  sobre criação de figurino.
-                </p>
-              </div>
-              <div class="pill">
-                <span>Itapetininga · em breve</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="row">
-              <div>
-                <strong>Mostra de fanarts &amp; fanfics</strong>
-                <p class="muted" style="margin:2px 0 0;font-size:0.9rem;">
-                  Exposição colaborativa com obras da comunidade, impressas e
-                  expostas em espaço cultural parceiro.
-                </p>
-              </div>
-              <div class="pill">
-                <span>Data a confirmar</span>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <article class="card gradient-border">
+          <img
+            src="../img/galeria/IMG_9042.jpg"
+            alt="Tutoriais e dicas de cosplay"
+            loading="lazy"
+          />
+          <div class="card__body">
+            <h3>Tutoriais &amp; Cosmakelab</h3>
+            <p>
+              Maquiagem, peruca, figurino, props e truques de palco — passo a
+              passo com fotos.
+            </p>
+            <a class="link" href="tutoriais.html">Aprender agora</a>
+          </div>
+        </article>
       </section>
 
-      <!-- CHAMADA FINAL -->
-      <section class="reveal" style="margin-top:32px;">
-        <div class="card glass" style="padding:18px 18px 20px;">
-          <div class="row wrap gap">
-            <div style="flex:1 1 220px;">
-              <p class="kicker">Participar</p>
-              <h2>Quer ver seu cosplay, fanart ou matéria aqui?</h2>
-              <p class="lead">
-                O Cosprysma é aberto para a comunidade. Se você tem um projeto,
-                relato de evento, ensaio fotográfico ou tutorial, manda pra
-                gente.
-              </p>
-            </div>
-            <div class="row gap" style="flex:0 0 auto;">
-              <a href="contato.html" class="btn">Enviar material</a>
-              <a href="fala.html" class="btn ghost">Falar com a redação</a>
-            </div>
-          </div>
-        </div>
+      <!-- HOJE NO COSPRYSMA -->
+      <section class="reveal">
+        <header class="section-head">
+          <h2>Hoje no Cosprysma</h2>
+          <a class="link" href="editorias.html">Ver todas as editorias</a>
+        </header>
+        <div id="home-editorias" class="cards three"></div>
+      </section>
+
+      <!-- FOTOS RECENTES -->
+      <section class="reveal">
+        <header class="section-head">
+          <h2>Fotos recentes</h2>
+          <a class="link" href="galeria.html">Ver galeria completa</a>
+        </header>
+        <div id="recent-photos" class="gallery-justified"></div>
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer glass">
       <div class="container footer-grid">
         <section>
@@ -417,13 +358,6 @@
             </li>
           </ul>
         </section>
-        <section>
-          <h4>Contato</h4>
-          <p class="muted">
-            Tem sugestão de pauta, crítica ou ideia de quadro novo? Fala com a
-            gente pela página de contato ou pelo Instagram.
-          </p>
-        </section>
       </div>
       <div class="copyright">
         © 2025 Cosprysma. Feito pela comunidade.
@@ -434,5 +368,6 @@
 
     <script src="/assents/config.js" defer></script>
     <script src="/assents/main.js" defer></script>
+    <script src="/assents/home.js" defer></script>
   </body>
 </html>
