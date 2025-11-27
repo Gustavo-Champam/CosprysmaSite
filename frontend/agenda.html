@@ -8,14 +8,14 @@
   <meta name="theme-color" content="#7C3AED" />
 
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" href="img/logoprincipal.jpeg" />
+  <link rel="icon" href="../img/logo.jpg" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
- <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div class="bg-mesh" aria-hidden="true"></div>
@@ -23,7 +23,7 @@
   <header class="topbar glass">
     <div class="container nav-flex">
       <a class="brand" href="index.html" aria-label="Página inicial">
-          <img src="/img/logo.png" alt="Cosprysma" width="32" height="32" />
+        <img src="/img/logo.png" alt="Cosprysma" width="32" height="32" />
         <span>Cosprysma</span>
       </a>
       <nav class="mainnav" id="nav">
@@ -54,6 +54,31 @@
       </p>
     </header>
 
+    <!-- AVISOS IMPORTANTES -->
+    <section class="reveal" style="margin-bottom: 2rem;">
+      <header class="section-head">
+        <h2>Avisos importantes</h2>
+      </header>
+
+      <article class="card glass">
+        <div class="card__body">
+          <ul>
+            <li>
+              <strong>Preços:</strong>
+              Os valores listados são estimativas baseadas no lote atual (meia-entrada ou social).
+              O preço pode aumentar na virada de lote ou na compra direta na porta do evento.
+            </li>
+            <li>
+              <strong>Confirmação:</strong>
+              Eventos regionais menores podem sofrer alterações de local ou horário sem aviso prévio.
+              Recomenda-se sempre checar o Instagram oficial do evento antes de sair de casa.
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- FILTROS (VISUAIS, OPCIONAIS) -->
     <section class="filters row wrap reveal">
       <label>Cidade
         <input id="city-filter" type="search" placeholder="Ex.: São Paulo" />
@@ -67,7 +92,131 @@
       <button id="apply-filters" class="btn" type="button">Aplicar</button>
     </section>
 
-    <ul id="events-list" class="events reveal"></ul>
+    <!-- LISTA DE EVENTOS -->
+    <ul id="events-list" class="events reveal">
+      <!-- ACE 2025 -->
+      <li class="event-card glass">
+        <h2>All Collections Expo (ACE 2025)</h2>
+        <p><strong>Data:</strong> 29 e 30 de novembro (Sábado e Domingo)</p>
+        <p>
+          <strong>Local:</strong> Arena da Baixada (Rua Buenos Aires, 1260 - Água Verde),
+          Curitiba - PR
+        </p>
+        <p>
+          <strong>O que rola:</strong> Foco em colecionismo high-end, mas com
+          “Cosplay Competition” oficial.
+        </p>
+        <p>
+          <strong>Ingressos:</strong> A partir de R$ 49,90 (meia). Pacotes VIP podem
+          passar de R$ 400.
+        </p>
+        <p><strong>Onde comprar:</strong> Acesse a Uticket.</p>
+      </li>
+
+      <!-- Bailão Cosplay -->
+      <li class="event-card glass">
+        <h2>Bailão Cosplay: A Noite dos Yokais</h2>
+        <p><strong>Data:</strong> 29 de novembro (Sábado), a partir das 23h</p>
+        <p>
+          <strong>Local:</strong> Experience Music (Rua Riachuelo, 20 - Lapa),
+          Rio de Janeiro - RJ
+        </p>
+        <p>
+          <strong>O que rola:</strong> Festa +18, balada otaku com desfile na pista.
+        </p>
+        <p><strong>Ingressos:</strong> A partir de R$ 30,00.</p>
+        <p><strong>Onde comprar:</strong> Acesse a Sympla ou Articket.</p>
+      </li>
+
+      <!-- Rolé Favela Geek -->
+      <li class="event-card glass">
+        <h2>Rolé Favela Geek (3ª Edição)</h2>
+        <p><strong>Data:</strong> 30 de novembro (Domingo), 10h às 18h</p>
+        <p>
+          <strong>Local:</strong> Vila Olímpica Mestre André (Padre Miguel),
+          Rio de Janeiro - RJ
+        </p>
+        <p>
+          <strong>O que rola:</strong> Evento cultural na Zona Oeste com oficinas e desfile.
+        </p>
+        <p><strong>Ingressos:</strong> Gratuito (necessário retirar cortesia).</p>
+        <p>
+          <strong>Onde retirar:</strong> Acesse a Sympla (busque por “Rolé Favela Geek”).
+        </p>
+      </li>
+
+      <!-- Cosfantasy Fest -->
+      <li class="event-card glass">
+        <h2>Cosfantasy Fest - Especial de Natal</h2>
+        <p><strong>Data:</strong> 30 de novembro (Domingo), 12h às 18h</p>
+        <p>
+          <strong>Local:</strong> Tijuca Tênis Clube (Tijuca), Rio de Janeiro - RJ
+        </p>
+        <p>
+          <strong>O que rola:</strong> Encontro tradicional, edição natalina.
+        </p>
+        <p>
+          <strong>Ingressos:</strong> Antecipados a partir de R$ 35,00.
+          Na porta costuma ser mais caro.
+        </p>
+        <p><strong>Onde comprar:</strong> Acesse a Sympla.</p>
+      </li>
+
+      <!-- Listen Kpop -->
+      <li class="event-card glass">
+        <h2>Listen Kpop (6ª Edição)</h2>
+        <p><strong>Data:</strong> 30 de novembro (Domingo), 12h às 18h</p>
+        <p>
+          <strong>Local:</strong> Biblioteca Parque Estadual (Centro),
+          Rio de Janeiro - RJ
+        </p>
+        <p>
+          <strong>O que rola:</strong> Evento de música pop coreana, público visual/fashion.
+        </p>
+        <p><strong>Ingressos:</strong> A partir de R$ 30,00 (meia).</p>
+        <p><strong>Onde comprar:</strong> Acesse a Sympla.</p>
+      </li>
+
+      <!-- KPOP IDOLS -->
+      <li class="event-card glass">
+        <h2>KPOP IDOLS (Edição Vista Alegre)</h2>
+        <p><strong>Data:</strong> 30 de novembro (Domingo)</p>
+        <p>
+          <strong>Local:</strong> Lona Cultural João Bosco (Vista Alegre),
+          Rio de Janeiro - RJ
+        </p>
+        <p>
+          <strong>O que rola:</strong> Competições de cover e random play dance
+          em espaço cultural público.
+        </p>
+        <p>
+          <strong>Ingressos:</strong> Geralmente populares (R$ 10,00 a R$ 20,00).
+        </p>
+        <p>
+          <strong>Onde comprar:</strong> Acesse a Sympla ou bilheteria local.
+        </p>
+        <p>
+          <strong>Nota:</strong> Sujeito a alteração de horário pela Lona Cultural.
+        </p>
+      </li>
+
+      <!-- Impacto Geek -->
+      <li class="event-card glass">
+        <h2>Impacto Geek 2025</h2>
+        <p><strong>Data:</strong> 29 e 30 de novembro</p>
+        <p><strong>Local:</strong> Macaé - RJ (clube local a confirmar)</p>
+        <p>
+          <strong>O que rola:</strong> Convenção regional de games e anime.
+        </p>
+        <p>
+          <strong>Ingressos:</strong> Estimado entre R$ 20,00 e R$ 40,00.
+        </p>
+        <p>
+          <strong>Nota:</strong>
+          Vendas geralmente ocorrem via Pix no Instagram do evento ou em pontos físicos locais.
+        </p>
+      </li>
+    </ul>
   </main>
 
   <footer class="footer glass">
