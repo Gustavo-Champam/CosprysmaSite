@@ -1599,6 +1599,23 @@ body.admin-body {
     height: 280px;
   }
 }
+
+/* ===== Imagens dos cards de Propagandas ===== */
+.promo-card img{
+  width: 100%;
+  height: 340px;
+  object-fit: contain;
+  background: #000;
+  border-radius: 18px 18px 0 0;
+  display: block;
+}
+
+@media (max-width: 860px){
+  .promo-card img{
+    height: 280px;
+  }
+}
+
 /* ===== Imagens dentro das matérias (reportagens / posts) ===== */
 .post-content figure img{
   width: 100%;
@@ -1609,4 +1626,3 @@ body.admin-body {
   background: #000;
   display: block;
 }
-
