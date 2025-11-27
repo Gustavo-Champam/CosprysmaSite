@@ -95,7 +95,7 @@ a:hover{opacity:.9}
   justify-content:center;
   gap:16px;
   flex:1;
-  flex-wrap:wrap; /* permite quebrar linha se faltar espaço */
+  flex-wrap:wrap;
 }
 
 /* links com texto alinhado */
@@ -180,7 +180,6 @@ a:hover{opacity:.9}
   min-height:52vh;
   padding:26px 0;
 }
-.hero__copy{}
 .hero__art{
   position:relative;
   height:320px;
@@ -565,21 +564,23 @@ a:hover{opacity:.9}
 }
 .filters label{
   display:flex;
-  align-items:center;
-  gap:8px;
-  white-space:nowrap;
+  flex-direction:column;
+  gap:4px;
+  font-size:13px;
+  color:var(--muted);
+  min-width:200px;
 }
+.filters select,
 .filters input[type="search"],
 .filters input[type="date"]{
-  flex:1;
-  min-width:180px;
-  padding:10px 14px;
+  padding:8px 12px;
   border-radius:999px;
   border:1px solid rgba(255,255,255,.12);
   background:rgba(255,255,255,.03);
   color:var(--fg);
   outline:none;
 }
+.filters select:focus,
 .filters input[type="search"]:focus,
 .filters input[type="date"]:focus{
   border-color:var(--accent2);
@@ -1570,33 +1571,31 @@ body.admin-body {
 /* ===== Cards especiais Fala Cosplayer ===== */
 .card--fala img{
   width: 100%;
-  height: 340px;        /* altura maior para as fotos */
-  object-fit: contain;  /* mostra a imagem inteira, sem cortar */
-  background: #000;     /* borda preta nas faixas laterais se sobrar espaço */
+  height: 340px;
+  object-fit: contain;
+  background: #000;
   border-radius: 18px 18px 0 0;
   display: block;
 }
 
 @media (max-width: 860px){
   .card--fala img{
-    height: 280px;      /* um pouco menor no mobile */
+    height: 280px;
   }
 }
-/* ===== Cards especiais Cosmakelab e Fala Cosplayer ===== */
-.card--fala img,
-.card--cosmakelab img{
+
+/* ===== Imagens dos cards do Cosmakelab (lista de tutoriais) ===== */
+#tutorials .card img{
   width: 100%;
-  height: 340px;      /* altura maior pra caber a foto inteira */
-  object-fit: contain;/* NÃO corta a imagem, encaixa dentro do card */
-  background: #000;   /* barras pretas nas laterais se sobrar espaço */
+  height: 340px;
+  object-fit: contain;
+  background: #000;
   border-radius: 18px 18px 0 0;
   display: block;
 }
 
 @media (max-width: 860px){
-  .card--fala img,
-  .card--cosmakelab img{
-    height: 280px;    /* um pouco menor no mobile */
+  #tutorials .card img{
+    height: 280px;
   }
 }
-
