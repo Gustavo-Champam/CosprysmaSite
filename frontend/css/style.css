@@ -1599,3 +1599,14 @@ body.admin-body {
     height: 280px;
   }
 }
+/* ===== Imagens dentro das matérias (reportagens / posts) ===== */
+.post-content figure img{
+  width: 100%;
+  height: auto;           /* tira o limite fixo de 200px */
+  max-height: 580px;      /* card mais alto, sem ficar gigante demais */
+  object-fit: contain;    /* mostra a imagem inteira, sem cortar */
+  border-radius: 18px;
+  background: #000;
+  display: block;
+}
+
