@@ -8,35 +8,36 @@
   <meta name="theme-color" content="#7C3AED"/>
 
   <link rel="manifest" href="manifest.webmanifest"/>
-  <link rel="icon" href="img/logoprincipal.jpeg"/>
+  <link rel="icon" href="img/logo.jpg"/>
   <link rel="apple-touch-icon" href="icons/icon-192.png"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
- <link rel="stylesheet" href="/css/style.css"></head>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
 <body>
   <div class="bg-mesh" aria-hidden="true"></div>
 
   <header class="topbar glass">
     <div class="container nav-flex">
       <a class="brand" href="index.html" aria-label="Página inicial">
-          <img src="/img/logo.png" alt="Cosprysma" width="32" height="32" />
+        <img src="/img/logo.png" alt="Cosprysma" width="32" height="32" />
       </a>
-     <nav class="mainnav" id="nav">
-          <a href="index.html">Início</a>
-          <a href="reportagem-queren-garcia.html">Estrela da Semana</a>
-          <a href="reportagem-fernanda-melo.html">Fanart</a>
-          <a href="reportagem-hidan-dosu.html">Flashcosplay</a>
-          <a href="reportagem-agenda-cultural.html">Agenda</a>
-          <a href="tutoriais.html">Cosmakelab</a>
-          <a href="falacosplay.html">Fala Cosplay</a>
-          <a href="galeria.html">Galeria</a>
-          <a href="contato.html">Contato</a>
-          <a class="cta" href="fala.html">Fala, Cosplayer!</a>
-          <a class="admin-link" href="login.html">Área do admin</a>
-        </nav>
+      <nav class="mainnav" id="nav">
+        <a href="index.html">Início</a>
+        <a href="reportagem-queren-garcia.html">Estrela da Semana</a>
+        <a href="reportagem-fernanda-melo.html">Fanart</a>
+        <a href="reportagem-hidan-dosu.html">Flashcosplay</a>
+        <a href="reportagem-agenda-cultural.html">Agenda</a>
+        <a href="tutoriais.html" aria-current="page">Cosmakelab</a>
+        <a href="falacosplay.html">Fala Cosplay</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+        <a class="cta" href="fala.html">Fala, Cosplayer!</a>
+        <a class="admin-link" href="login.html">Área do admin</a>
+      </nav>
       <div class="nav-actions">
         <button id="theme-toggle" class="icon-btn" aria-label="Alternar tema">Tema</button>
         <button id="burger" class="icon-btn burger" aria-label="Abrir menu">☰</button>
@@ -46,19 +47,90 @@
 
   <main class="container">
     <header class="page-head">
-      <h1>Cosmakelab</h1>
+      <p class="kicker">Cosmakelab</p>
+      <h1>Passo a passo para tirar seu cosplay do papel</h1>
       <p class="lead">
-        Tutoriais e processos de criação: maquiagem, peruca, acessórios e props, com passo a passo em fotos.
+        Tutoriais de costura, peruca, eletrônica e props, com dicas práticas para montar
+        seu cosplay sem gastar horrores e com acabamento bonito.
       </p>
     </header>
 
+    <!-- busca / filtros -->
     <section class="row wrap gap reveal">
-      <input id="tutorial-search" type="search" placeholder="Buscar tutoriais…"/>
+      <input id="tutorial-search" type="search" placeholder="Buscar tutoriais…" />
       <div class="chips" id="tutorial-tags"></div>
     </section>
 
+    <!-- TUTORIAIS EM DESTAQUE -->
     <section id="tutorials" class="cards three reveal">
-      <!-- cards carregados via assents/tutoriais.js -->
+      <!-- Card 1 – Costura + materiais alternativos -->
+      <article
+        class="card gradient-border tutorial"
+        data-title="Cosplay sem gastar horrores"
+        data-tags="costura,economia,figurino,materiais alternativos"
+      >
+        <img
+          src="img/cosmakelab/costura-moldes.jpg"
+          alt="Moldes de roupa e tecidos sobre a mesa de costura"
+          loading="lazy"
+        />
+        <div class="card__body">
+          <h2>Cosplay sem gastar horrores</h2>
+          <p class="muted">
+            Truques de costura, reaproveitamento de roupas e uso de EVA, papelão e outros
+            materiais acessíveis para montar figurinos completos sem esvaziar o bolso.
+          </p>
+          <a class="link" href="cosmakelab-cosplay-economico.html">
+            Ver passo a passo
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2 – Peruca salva com vapor -->
+      <article
+        class="card gradient-border tutorial"
+        data-title="Peruca salva: o truque do vapor"
+        data-tags="peruca,manutenção,fibra sintética,cabelo"
+      >
+        <img
+          src="img/cosmakelab/peruca-embolada.jpg"
+          alt="Peruca rosa sintética toda embaraçada"
+          loading="lazy"
+        />
+        <div class="card__body">
+          <h2>Peruca salva: o truque do vapor</h2>
+          <p class="muted">
+            Como recuperar perucas sintéticas usando água quente ou vaporizador, sem
+            derreter as fibras, com dicas de lavagem, desembaraço e finalização.
+          </p>
+          <a class="link" href="cosmakelab-peruca-vapor.html">
+            Ver passo a passo
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3 – Homem de Ferro / eletrônica -->
+      <article
+        class="card gradient-border tutorial"
+        data-title="Do Homem de Ferro à tecnologia"
+        data-tags="eletrônica,robótica,armadura,homem de ferro"
+      >
+        <img
+          src="img/cosmakelab/ironman-armadura.jpg"
+          alt="Cosplay de armadura inspirada no Homem de Ferro com iluminação"
+          loading="lazy"
+        />
+        <div class="card__body">
+          <h2>Do Homem de Ferro à tecnologia</h2>
+          <p class="muted">
+            A história de Gabriel, 16 anos, que aprendeu eletrônica, robótica e programação
+            construindo sua própria armadura inspirada no Homem de Ferro.
+          </p>
+          <a class="link" href="cosmakelab-ironman-gabriel.html">
+            Ler matéria completa
+          </a>
+        </div>
+      </article>
     </section>
   </main>
 
