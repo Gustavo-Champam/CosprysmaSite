@@ -10,8 +10,8 @@
 /* Tema claro opcional */
 :root[data-theme="light"]{
   --bg:#F6F7FB;
-  --fg:#34D399;
-  --muted:#ffffff;
+  --fg:#0F172A;
+  --muted:#6B7280;
   --primary:#6D28D9;
   --accent:#0EA5E9;
   --accent2:#10B981;
@@ -95,7 +95,7 @@ a:hover{opacity:.9}
   justify-content:center;
   gap:16px;
   flex:1;
-  flex-wrap:nowrap;
+  flex-wrap:wrap; /* permite quebrar linha se faltar espaço */
 }
 
 /* links com texto alinhado */
@@ -1208,6 +1208,7 @@ h2 { font-size: clamp(20px, 6vw, 28px); margin: 14px 0 8px; }
   background:rgba(148,163,184,.6);
   border-radius:999px;
 }
+
 /* SLIDES DO ADMIN (SLIDESHOW POR NOTÍCIA) */
 .slides-list{
   display:flex;
@@ -1215,14 +1216,12 @@ h2 { font-size: clamp(20px, 6vw, 28px); margin: 14px 0 8px; }
   gap:12px;
   margin-top:10px;
 }
-
 .slide-item{
   border-radius:12px;
   border:1px solid rgba(255,255,255,.16);
   padding:10px 12px;
   background:rgba(5,7,18,.8);
 }
-
 .slide-item__header{
   display:flex;
   align-items:center;
@@ -1230,19 +1229,16 @@ h2 { font-size: clamp(20px, 6vw, 28px); margin: 14px 0 8px; }
   gap:8px;
   margin-bottom:6px;
 }
-
 .slide-title{
   font-size:13px;
   font-weight:600;
   color:var(--muted);
 }
-
 .slide-item__body label{
   display:block;
   margin:6px 0;
   font-size:14px;
 }
-
 .slide-item__body input,
 .slide-item__body textarea{
   width:100%;
@@ -1253,13 +1249,11 @@ h2 { font-size: clamp(20px, 6vw, 28px); margin: 14px 0 8px; }
   padding:8px 10px;
   outline:none;
 }
-
 .slide-item__body input:focus,
 .slide-item__body textarea:focus{
   border-color:var(--accent2);
   box-shadow:0 0 0 3px rgba(52,211,153,.18);
 }
-
 .slide-upload{
   display:flex;
   align-items:center;
@@ -1267,21 +1261,18 @@ h2 { font-size: clamp(20px, 6vw, 28px); margin: 14px 0 8px; }
   margin-top:4px;
   flex-wrap:wrap;
 }
-
 .slide-upload input[type="file"]{
   font-size:12px;
 }
-
 .small{
   font-size:13px;
 }
-
 .btn-xs{
   font-size:12px;
   padding:4px 10px;
 }
-/* ===== Painel Admin Cosmakelab ===== */
 
+/* ===== Painel Admin Cosmakelab ===== */
 body.admin-body {
   min-height: 100vh;
   margin: 0;
