@@ -1567,18 +1567,6 @@ body.admin-body {
   color: #d1d5db;
 }
 
-/* ===== Cards especiais de Fala Cosplayer (imagens verticais) ===== */
-.card--fala img{
-  width:100%;
-  height:auto;
-  max-height:360px;
-  object-fit:contain;      /* mostra a imagem inteira */
-  background:#000;
-  border-radius:14px;
-}
-.card--fala .card__body{
-  padding-top:10px;
-}
 /* ===== Cards especiais Fala Cosplayer ===== */
 .card--fala img{
   width: 100%;
@@ -1594,4 +1582,3 @@ body.admin-body {
     height: 280px;      /* um pouco menor no mobile */
   }
 }
-
