@@ -1314,18 +1314,6 @@ body.admin-body {
   gap: 1.5rem;
 }
 
-.admin-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
-  gap: 1.5rem;
-}
-
-@media (max-width: 900px) {
-  .admin-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
 .admin-card {
   background: rgba(15, 23, 42, 0.92);
   border-radius: 1rem;
@@ -1577,4 +1565,17 @@ body.admin-body {
   margin: 0;
   font-size: 0.85rem;
   color: #d1d5db;
+}
+
+/* ===== Cards especiais de Fala Cosplayer (imagens verticais) ===== */
+.card--fala img{
+  width:100%;
+  height:auto;
+  max-height:360px;
+  object-fit:contain;      /* mostra a imagem inteira */
+  background:#000;
+  border-radius:14px;
+}
+.card--fala .card__body{
+  padding-top:10px;
 }
