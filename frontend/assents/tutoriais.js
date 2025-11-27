@@ -60,7 +60,19 @@
 
     filtered.forEach((t) => {
       const art = document.createElement('article');
-      art.className = 'card gradient-border';
+      // classe extra específica pros cards de tutoriais
+      art.className = 'card gradient-border card--tutorial';
+
+      // tenta vários nomes de campo pro caminho da imagem
+      const imgSrc = t.capa || t.imagem || t.image || t.thumb || '';
+      if (imgSrc) {
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = t.alt || t.titulo || '';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        art.appendChild(img);
+      }
 
       const body = document.createElement('div');
       body.className = 'card__body';
